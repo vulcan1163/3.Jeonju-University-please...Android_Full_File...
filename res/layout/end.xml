@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/LLname"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip"
+            android:text="Please enter your name."
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/EdtName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dip" />
+
+        <Button
+            android:id="@+id/BtnOK"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="OK" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLgameover"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="GAME OVER"
+                android:textColor="#ff0000"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" 
+                android:layout_margin="15dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Your Score : "
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/yourscoretext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_margin="15dip" >
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Exit" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Menu" />
+
+                <Button
+                    android:id="@+id/BtnRank"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rank" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLrank"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="#363636"
+            android:orientation="vertical" 
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Ranking List"
+                android:textSize="25dip"
+                android:layout_margin="10dip"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
